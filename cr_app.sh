@@ -5,6 +5,7 @@ mkdir apps/$1
 
 # run startapp
 python manage.py startapp apps_$1 apps/$1
+sleep 1
 
 # cr urls.py
 touch apps/$1/urls.py
