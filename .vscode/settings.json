@@ -17,6 +17,12 @@
         "plaintext": "html"
     },
     "editor.detectIndentation": false,
+    "indentRainbow.ignoreErrorLanguages": [
+        "markdown",
+        "haskell",
+        "html",
+        "django-html"
+    ],
     "[django-html]": {
         "editor.defaultFormatter": "monosans.djlint",
         "editor.trimAutoWhitespace": true,
