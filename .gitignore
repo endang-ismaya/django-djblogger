@@ -161,8 +161,6 @@ cython_debug/
 
 # Endang
 .Pipfile.lock
-# .vscode/
-# mynotes.txt
 resources/
 debug_logs/
 media/

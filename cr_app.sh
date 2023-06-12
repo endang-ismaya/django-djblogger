@@ -11,4 +11,22 @@ sleep 1
 touch apps/$1/urls.py
 echo "from django.urls import path" >> apps/$1/urls.py
 echo "" >> apps/$1/urls.py
-echo "urlpatterns = []" >> apps/$1/urls.py
+echo "urlpatterns = [" >> apps/$1/urls.py
+echo "  path(\"\")," >> apps/$1/urls.py
+echo "]" >> apps/$1/urls.py
+sleep 1
+
+# cr templates app
+mkdir templates/$1
+sleep 1
+
+# cr forms.py
+touch apps/$1/forms.py
+echo "from django import forms" >> apps/$1/forms.py
+sleep 1
+
+# cr views.py
+rm apps/$1/views.py
+touch apps/$1/views.py
+echo "from django.views import View" >> apps/$1/views.py
+echo "from django.shortcuts import render" >> apps/$1/views.py

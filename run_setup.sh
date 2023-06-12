@@ -25,5 +25,9 @@ sleep 2
 touch _project/.env
 mkdir _project/static
 mkdir apps
-mkdir templates
+# mkdir templates
 mkdir media
+
+# Add info to .env
+echo "DJANGO_SECRET_KEY=" >> _project/.env
+echo "DEBUG=True" >> _project/.env

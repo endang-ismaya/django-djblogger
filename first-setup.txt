@@ -1,36 +1,18 @@
-1) remove remote
+1) run run_setup.sh
 
-git remote remove origin
+./run_setup.sh
 
-2) uncomment mynotes.txt and .vscode/
-3) install all requirements with pipenv
-
-pipenv install
-pipenv install --dev
-
-4) select python interpreter with vscode
+2) select python interpreter with vscode
 
 ctrl + shift + p
 select pythoninterpreter
 select project folder name that has been created
 
-5) Create Django Project
-
-django-admin startproject _project .
-
-6) Create Django additional File(s) and Folder(s)
-
-touch _project/.env
-mkdir _project/static
-mkdir apps
-mkdir templates
-mkdir media
-
-7) Update _project/.env file
+3) Update _project/.env file
 DJANGO_SECRET_KEY="django-insecure-@+*pmku!_t*cz!r3@qp_42ry18=mbt-v7$ga7*!u7u*4^x)vxr"
 DEBUG=True
 
-8) Setup env in _project/setting.py
+4) Setup env in _project/setting.py
 
 import os
 import dotenv
@@ -50,11 +32,11 @@ DEBUG = os.environ.get("DEBUG") == "True"
 
 ALLOWED_HOSTS = []
 
-9) add template DIRS to TEMPLATES in setting.py
+5) add template DIRS to TEMPLATES in setting.py
 
 "DIRS": [os.path.join(BASE_DIR, "templates")],
 
-10) Add Static and Media setting
+6) Add Static and Media setting
 
 # STATIC
 STATIC_URL = "static/"
@@ -65,7 +47,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "_project", "static")]
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-11) Update project's URL 
+7) Update project's URL 
 """
 Project URLs
 """
