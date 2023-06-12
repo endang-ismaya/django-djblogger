@@ -1,6 +1,7 @@
-1) run run_setup.sh
+1) run setup
 
-./run_setup.sh
+./01_set_pipenv.sh
+./02_set_django.sh
 
 2) select python interpreter with vscode
 
