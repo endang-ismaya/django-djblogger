@@ -30,3 +30,9 @@ rm apps/$1/views.py
 touch apps/$1/views.py
 echo "from django.views import View" >> apps/$1/views.py
 echo "from django.shortcuts import render" >> apps/$1/views.py
+
+# update apps_ to apps.
+sed -i "s/apps_$1/apps.$1/gi" apps/$1/apps.py
+
+# add installed apps
+sed -i '/internal apps/a\ \ \ \ "apps.$1",' _project/settings.py
