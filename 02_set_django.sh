@@ -19,4 +19,4 @@ echo "DJANGO_SECRET_KEY=" >> _project/.env
 echo "DEBUG=True" >> _project/.env
 
 # Add internal/external apps to settings
-sed -i '/"django.contrib.staticfiles",/a\ \ \ \ # internal apps\n\ \ \ \ # external apps' _project/settings.py
+sed -i '/"django.contrib.staticfiles",/a\ \ \ \ # internal apps\n\ \ \ \ # 3rd party apps' _project/settings.py
