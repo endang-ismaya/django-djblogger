@@ -1,6 +1,6 @@
 1) run setup
 
-./01_set_pipenv.sh
+./01_set_venv.sh
 ./02_set_django.sh
 
 2) select python interpreter with vscode
@@ -13,7 +13,7 @@ select project folder name that has been created
 DJANGO_SECRET_KEY="django-insecure-@+*pmku!_t*cz!r3@qp_42ry18=mbt-v7$ga7*!u7u*4^x)vxr"
 DEBUG=True
 
-4) Setup env in _project/setting.py
+4) Setup env in _core/setting.py
 
 import os
 import dotenv
