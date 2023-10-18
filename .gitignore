@@ -164,5 +164,5 @@ cython_debug/
 resources/
 debug_logs/
 media/
-mynotes.txt
+notes123.txt
 .vscode/

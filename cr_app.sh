@@ -38,4 +38,4 @@ echo "from django.shortcuts import render" >> apps/${APP_NAME}/views.py
 sed -i "s/apps_${APP_NAME}/apps.${APP_NAME}/gi" apps/${APP_NAME}/apps.py
 
 # add installed apps
-sed -i "/internal apps/a\ \ \ \ \"apps.${APP_NAME}\"," _project/settings.py
+sed -i "/internal apps/a\ \ \ \ \"apps.${APP_NAME}\"," _core/settings.py
