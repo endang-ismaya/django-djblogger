@@ -16,14 +16,10 @@ echo ".vscode/" >> .gitignore
 git commit -m "add mynotes.txt and .vscode to .gitignore"
 
 
-# install all requirements with pipenv
-pipenv install
-sleep 2
-pipenv install --dev
-sleep 2
+# install all requirements with venv
+python -m venv .venv
+sleep 3
 
-# activate env
-pipenv shell
+Source ./venv/Script/Activate
 sleep 2
-
 
