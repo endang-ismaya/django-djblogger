@@ -34,6 +34,15 @@ body {
     letter-spacing: -0.6px;
 }
 
+/* footer */
+.footer .nav-link {
+    padding: 0px 10px 5px 0px;
+}
+
+.footer a {
+    color: inherit;
+}
+
 @media only screen and (max-width: 768px) {
     .infscroll__title {
         font-size: 0.9375rem;
