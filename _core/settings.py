@@ -19,6 +19,7 @@ DEBUG = os.environ.get("DEBUG") == "True"
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -57,7 +58,10 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
             ],
-            "builtins": ["apps.blog.templatetags.tag_cloud"],
+            "builtins": [
+                "apps.blog.templatetags.tag_cloud",
+                "apps.blog.templatetags.markdown_processing",
+            ],
         },
     },
 ]

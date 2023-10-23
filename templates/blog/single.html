@@ -25,8 +25,7 @@
     <div class="text-muted pb-5">{{ post.updated_at|date:"M d" }}</div>
     <h1 class="fw-bold pb-2">{{ post.title }}</h1>
     <h2 class="text-muted fs-4 pb-4">{{ post.subtitle }}</h2>
-    {% comment %} <div class="post">{{ post.content | markdown | safe }}</div> {% endcomment %}
-    <div class="post">{{ post.content }}</div>
+    <div class="post">{{ post.content | markdown | safe }}</div>
   </div>
 {% endblock content-mid %}
 {% block content-right %}

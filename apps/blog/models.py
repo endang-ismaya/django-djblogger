@@ -7,7 +7,7 @@ from taggit.managers import TaggableManager
 class Post(models.Model):
     options = (
         ("draft", "Draft"),
-        ("publish", "Published"),
+        ("published", "Published"),
     )
 
     title = models.CharField(max_length=250)
