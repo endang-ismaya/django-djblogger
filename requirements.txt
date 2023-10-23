@@ -19,6 +19,7 @@ inflection==0.5.1
 iniconfig==2.0.0
 jsbeautifier==1.14.9
 json5==0.9.14
+Markdown==3.5
 mccabe==0.7.0
 mypy-extensions==1.0.0
 packaging==23.2

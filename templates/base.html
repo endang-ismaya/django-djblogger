@@ -17,14 +17,8 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% block css_files %}
     {% endblock css_files %}
-    <!-- htmx
-    <script src="{% static 'js/htmx.min.js' %}" defer></script>
-    -->
   </head>
   <body>
-    <header>
-      {% include "includes/navbar.html" %}
-    </header>
     {% block content %}
     {% endblock content %}
     <script src="https://unpkg.com/htmx.org@1.9.6"

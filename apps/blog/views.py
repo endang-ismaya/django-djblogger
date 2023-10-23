@@ -1,3 +1,4 @@
+from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView
 
 from apps.blog.models import Post
@@ -14,3 +15,9 @@ class HomeView(ListView):
             return "components/post-list-elements.html"
 
         return "blog/index.html"
+
+
+def post_single(request, slug):
+    post = get_object_or_404(Post, slug=slug, status="published")
+    context = {"post": post}
+    return render(request, "blog/single.html", context)

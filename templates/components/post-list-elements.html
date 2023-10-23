@@ -1,5 +1,5 @@
 {% for post in posts %}
-  <a href="" class="text-decoration-none">
+  <a href="{{ post.get_absolute_url }}" class="text-decoration-none">
     <div class="card border-0 pb-3 pb-sm-5"
          {% if forloop.last %}hx-get="{% url "blog__home" %}?page={{ page_obj.number|add:1 }}" hx-trigger="revealed" hx-swap="afterend"{% endif %}>
       <div class="row">
