@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView
 
+from apps.blog.forms import PostSearchForm
 from apps.blog.models import Post
 
 
@@ -43,3 +44,21 @@ class TagListView(ListView):
         context = super(TagListView, self).get_context_data(**kwargs)
         context["tag"] = self.kwargs["tag"]
         return context
+
+
+class PostSearchView(ListView):
+    model = Post
+    paginate_by = 5
+    context_object_name = "posts"
+    form_class = PostSearchForm
+
+    def get_queryset(self):
+        form = self.form_class(self.request.GET)
+        if form.is_valid():
+            return Post.objects.filter(title__icontains=form.cleaned_data["q"])
+        return []
+
+    def get_template_names(self):
+        if self.request.htmx:
+            return "components/post-list-elements-search.html"
+        return "blog/search.html"

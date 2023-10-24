@@ -29,6 +29,7 @@
   </div>
 {% endblock content-mid %}
 {% block content-right %}
+  {% include "components/search-bar.html" with classes="mb-5" %}
   {% sidebar_tag_cloud %}
   <div class="col-12">
     <div class="pb-3">More from {{ post.author }}</div>
@@ -41,7 +42,7 @@
               <h1 class="mb-1 fs-6 p-0 text-dark fw-bold">{{ post.title|truncatechars:80 }}</h1>
             </div>
             <div class="col-3">
-              <img src="https://picsum.photos/205/115" class="img-fluid float-end">
+              <img src="https://picsum.photos/205/115" class="img-fluid float-end" alt="random image">
             </div>
           </div>
         </div>
