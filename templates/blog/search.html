@@ -16,5 +16,6 @@
   </div>
 {% endblock content-mid %}
 {% block content-right %}
+  {% include "components/search-bar.html" with classes="mb-5" %}
   {% sidebar_tag_cloud %}
 {% endblock content-right %}
